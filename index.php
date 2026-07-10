@@ -2,7 +2,6 @@
 require_once 'models/CommandeModel.php';
 require_once 'controllers/CommandeController.php';
 
-// Si une action est reçue
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['action']) && $_POST['action'] === 'servir') {
         CommandeModel::updateStatus($_POST['id'], 'SERVIE');
@@ -15,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// On récupère tout
 $commandes = CommandeModel::getPending();
 $caTotal = CommandeController::calculerCA();
 $pop = CommandeModel::getPopularType();
