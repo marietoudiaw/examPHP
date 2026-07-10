@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         CommandeModel::updateStatus($_POST['id'], 'SERVIE');
     } 
     elseif (isset($_POST['action']) && $_POST['action'] === 'ajouter') {
-        // Validation RG Métier
+
         if ($_POST['quantite'] > 0) {
             CommandeModel::insert($_POST['table'], $_POST['plat'], $_POST['quantite'], $_POST['type']);
         }
