@@ -59,6 +59,6 @@
     <hr>
     <h3>Statistiques du jour</h3>
     <p>Chiffre d'affaires total encaissé : <strong><?= number_format($caTotal, 0, ',', ' ') ?> FCFA</strong></p>
-    <p>Plat le plus populaire: <strong><?= isset($pop['type_plat']) ? $pop['type_plat'] : "Aucun" ?></strong></p>
+    <p>Plat le plus populaire: <strong><?= isset($pop['n_plat']) ? $pop['nom_plat'] : "Aucun" ?></strong></p>
 </body>
 </html> 
